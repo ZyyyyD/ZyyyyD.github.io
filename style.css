@@ -23,6 +23,9 @@ body{
     text-align: center;
     text-shadow: 2px  2px black;
 }
+.carousel{
+    
+}
 /* .overlay {
     position: absolute;
     top: 0;
@@ -37,8 +40,16 @@ body{
     background-color: #E6B17E;
 }
 .footer{
-    background-color: #99592A;
+    background-color:#212529;
 }
+
+.footer h4{
+    color: #E6B17E;
+}
+.footer h5{
+    color: #99592A;
+}
+
 @media screen and (min-width: 768px) {
     /* .navbar-brand{
         width: 100px;
