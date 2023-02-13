@@ -25,19 +25,19 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto d-flex align-items-center">
           <li class="nav-items">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Order</a>
+            <a class="nav-link" href="order.html">Order</a>
           </li>
           <a class="navbar-brand d-none d-lg-block" href="#"><img src="img/png/logo-no-background.png" alt=""
               width="100px"></a>
           <li class="nav-item ">
-            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="menu.html">Menu</a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -50,10 +50,10 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li  class="nav-item" ><a class="nav-link" href="#">Home</a></li>
-          <li  class="nav-item" ><a class="nav-link" href="#">Order</a></li>
-          <li  class="nav-item" ><a class="nav-link" href="#">Menu</a></li>
-          <li  class="nav-item" ><a class="nav-link" href="#">Contact</a></li>
+          <li  class="nav-item" ><a class="nav-link" href="index.html">Home</a></li>
+          <li  class="nav-item" ><a class="nav-link" href="order.html">Order</a></li>
+          <li  class="nav-item" ><a class="nav-link" href="menu.html">Menu</a></li>
+          <li  class="nav-item" ><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -97,9 +97,9 @@
   <!-- story -->
   <div class="container my-5">
     <div class="row">
-      <div class="col-md-6 d-flex flex-column">
-        <h1 class="display-4">Welcome to Kohi Coffee</h1>
-        <p class="display-6"></p>
+      <div class="col-md-6 d-flex flex-column my-2">
+        <h1 class="display-4 my-3">Welcome to Kohi Coffee</h1>
+        <p class="display-6 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, laboriosam, voluptates vero saepe voluptatum numquam fuga iste illum maxime repellendus totam et nesciunt esse deserunt veniam. Eius animi consequatur omnis.</p>
         <div class="readmore">
 
           <button type="button" class="btn btn-lg btn-outline-dark">Read More</button>
@@ -114,32 +114,42 @@
   <br>
 
   <!-- Drinks-->
-  <div class="drinks container-fluid ">
-    <h4 class="display-1 text-center mt-5 ">Drinks</h4>
-    <div class="card card-color">
+  <div class="drinks container-fluid">
+    <h4 class="display-1 text-center m-3">Drinks</h4>
       <div class="row text-center">
-        <div class="col-md-4 ">
+        <div class="col-md-4 col-4">
+          <div class=" my-3">
 
-          <img src="./img/iced1.jpg" alt="" class="img card-img">
-          <div class="overlay">
-            <div class="card-header">Iced Coffee</div>
+            <div class="img-drinks">
+          <img src="./img/iced1.jpg" alt="" class="img--iced">
+
+        <div class="img--overlay">
+          <p class="drinks-title fw-bold">Iced Coffee</p>
+        </div> 
+        </div> 
+      </div>
+             
+    </div>
+        <div class="col-md-4  col-4">
+         <div class=" my-3">
+          <div class="img-drinks">
+          <img src="./img/frappe1.jpg" alt="" class="img--iced">
+          <div class="img--overlay">
+           <p class="drinks-title fw-bold">Frappes</p>
           </div>
         </div>
-        <div class="col-md-4">
-
-          <img src="./img/frappe1.jpg" alt="" class="img card-img">
-          <div class="overlay1">s
-            <div class="card-header">Frappes</div>
+      </div>
+    </div>
+        <div class="col-md-4  col-4">
+          <div class=" my-3">
+            <div class="img-drinks">
+          <img src="./img/hot-coffee1.jpg" alt="" class="img--iced">
+          <div class="img--overlay">
+            <p class="drinks-title fw-bold">Hot Coffee</p>
           </div>
         </div>
-        <div class=" col-md-4 ">
-
-          <img src="./img/hot-coffee1.jpg" alt="" class="img card-img">
-          <div class="overlay2">
-            <div class="card-header">
-              Hot Coffee</div>
-          </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -164,17 +174,17 @@
   <div class="footer">
     <div class=" container-fluid  ">
       <div class="row text-center ">
-        <div class="col-md-3 my-5 ">
-          <div class="logofooter my-5">
+        <div class="col-md-3  col-xs-3 my-5 ">
+          <div class="logofooter my-3">
             <img src="img/png/logo-no-background.png" alt="kohicoffee" width="200px">
           </div>
         </div>
-        <div class="col-md-3 my-3 d-flex justify-content-center align-self-center flex-column ">
+        <div class="col-md-3  col-xs-3  my-3 d-flex justify-content-center align-self-center flex-column ">
           <h4>Cabulusan, 10th Michael Street</h4>
           <h5>Magallanes, Cavite</h5>
           <h5>Philippines, 4113</h5>
         </div>
-        <div class="col-md-3  my-3 d-flex justify-content-center align-self-center flex-column">
+        <div class="col-md-3   col-xs-3  my-3 d-flex justify-content-center align-self-center flex-column">
           <h4>Delivery</h4>
           <h5>097312722</h5>
         </div>

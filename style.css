@@ -1,6 +1,7 @@
 body{
     background-color: #ffdcbb;
 }
+/* title */
 .navbar-brand{
     padding-left: 1rem;
 }
@@ -23,7 +24,58 @@ body{
     text-align: center;
     text-shadow: 2px  2px black;
 }
-.carousel{
+li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #E6B17E;
+    margin: auto;
+    display: block;
+
+}
+li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+    margin-top:5px;
+
+}
+li a:hover{
+    color: #E6B17E;
+}
+/* drinks section */
+.drinks.container-fluid{
+    background-color: #E6B17E;
+
+}
+.img-drinks{
+    position: relative;
+    
+}
+.img--iced{
+    display: block;
+    width: 95%;
+    cursor:pointer;
+}
+.img--overlay{
+    cursor:pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.img--overlay:hover{
+    opacity: 1;
+}
+.drinks-title{
+    font-size: 1.50em;
     
 }
 /* .overlay {
@@ -31,14 +83,7 @@ body{
     top: 0;
     left: 0;
 } */
-.drinks .card-color{
-    background-color: #E6B17E;
-    border:none
-}
-.drinks{
-    
-    background-color: #E6B17E;
-}
+
 .footer{
     background-color:#212529;
 }
@@ -48,10 +93,4 @@ body{
 }
 .footer h5{
     color: #99592A;
-}
-
-@media screen and (min-width: 768px) {
-    /* .navbar-brand{
-        width: 100px;
-    } */
 }
