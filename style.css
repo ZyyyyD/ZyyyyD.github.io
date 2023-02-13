@@ -94,3 +94,13 @@ li a:hover{
 .footer h5{
     color: #99592A;
 }
+
+.footer h4{
+    color: #E6B17E;
+}
+@media screen and (min-width: 768px) {
+    /* .navbar-brand{
+        width: 100px;
+    } */
+}
+
