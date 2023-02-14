@@ -1,5 +1,14 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+*{
+    
+    font-family: 'Signika', sans-serif;
+}
+
+
 body{
-    background-color: #ffdcbb;
+    background-color: #E6B17E;
 }
 /* title */
 .navbar-brand{
@@ -78,11 +87,7 @@ li a:hover{
     font-size: 1.50em;
     
 }
-/* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
+/* CUSTOMER SERVICE */
 
 .footer{
     background-color:#212529;
@@ -97,10 +102,5 @@ li a:hover{
 
 .footer h4{
     color: #E6B17E;
-}
-@media screen and (min-width: 768px) {
-    /* .navbar-brand{
-        width: 100px;
-    } */
 }
 
