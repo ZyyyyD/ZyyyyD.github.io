@@ -8,7 +8,7 @@
 
 
 body{
-    background-color: #E6B17E;
+    background-color:#212529;
 }
 /* title */
 .navbar-brand{
@@ -88,7 +88,20 @@ li a:hover{
     
 }
 /* CUSTOMER SERVICE */
+.fb{
+    color: #E6B17E;
+}
 
+
+/* FOOTER */
+.icons{
+    color: #E6B17E;
+}
+.contact-txt{
+    text-decoration: none;
+    color: #E6B17E;
+    
+}
 .footer{
     background-color:#212529;
 }
