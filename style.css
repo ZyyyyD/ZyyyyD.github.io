@@ -92,7 +92,38 @@ li a:hover{
     color: #E6B17E;
 }
 
+/* Contact */
+.contact-text{
+    color: #E6B17E;
+}
+.map-responsive{
 
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+textarea{
+    width: 100%;
+}
 /* FOOTER */
 .icons{
     color: #E6B17E;
