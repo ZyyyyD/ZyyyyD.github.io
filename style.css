@@ -96,10 +96,10 @@ li a:hover{
 .order-text{
     outline: 0;
     border-width: 0 0 2px;
-    border-color: #E6B17E;
+    border-color: #212529;
 }
 .order-text:focus{
-    border-color: #E6B17E;
+    border-color: #212529;
     outline: 1px dotted #000
 }
 /* Contact */
