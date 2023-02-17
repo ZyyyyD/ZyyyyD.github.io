@@ -85,7 +85,6 @@ li a:hover{
 }
 .drinks-title{
     font-size: 1.50em;
-    
     color:#fff;
 }
 
@@ -173,3 +172,6 @@ textarea{
     color: #E6B17E;
 }
 
+.icons{
+    color: #E6B17E;
+}
