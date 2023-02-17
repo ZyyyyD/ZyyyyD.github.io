@@ -103,6 +103,10 @@ li a:hover{
     outline: 1px dotted #000
 }
 /* Contact */
+.mail{
+    text-decoration: none;
+    color: #E6B17E;
+}
 .contact-text{
     color: #E6B17E;
 }
