@@ -93,6 +93,10 @@ li a:hover{
     color: #E6B17E;
 }
 /* order */
+.loc{
+    text-decoration: none;
+    color: #E6B17E;
+}
 .order-text{
     outline: 0;
     border-width: 0 0 2px;
