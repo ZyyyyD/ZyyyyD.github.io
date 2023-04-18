@@ -1,39 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+* {
 
-*{
-    
     font-family: 'Signika', sans-serif;
 }
 
 
-body{
-    background-color:#212529;
+body {
+    background-color: #3f89d4;
 }
+
 /* title */
-.navbar-brand{
+.navbar-brand {
     padding-left: 1rem;
 }
-.navbar .navbar-nav .nav-link{
-    color:#fff;
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
     font-size: 1em;
     padding: 1em;
 }
+
 .title {
- 
-    color: #E6B17E;
+
+    color:
+        #FFA240;
 
     font-size: 1.2em;
     text-align: center;
     text-shadow: 2px 2px black;
 }
+
 .slogan {
-    color:#99592A;
+    color:
+        #FFA240;
     font-size: 1.2em;
     text-align: center;
-    text-shadow: 2px  2px black;
+    text-shadow: 2px 2px black;
 }
-li a::after{
+
+li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -42,31 +48,37 @@ li a::after{
     display: block;
 
 }
-li a:hover::after{
+
+li a:hover::after {
     width: 100%;
     transition: width 0.3s linear;
-    margin-top:5px;
+    margin-top: 5px;
 
 }
-li a:hover{
+
+li a:hover {
     color: #E6B17E;
 }
+
 /* drinks section */
-.drinks.container-fluid{
+.drinks.container-fluid {
     background-color: #E6B17E;
 
 }
-.img-drinks{
+
+.img-drinks {
     position: relative;
-    
+
 }
-.img--iced{
+
+.img--iced {
     display: block;
     width: 95%;
-    cursor:pointer;
+    cursor: pointer;
 }
-.img--overlay{
-    cursor:pointer;
+
+.img--overlay {
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
@@ -80,106 +92,127 @@ li a:hover{
     opacity: 0;
     transition: opacity 0.5s;
 }
-.img--overlay:hover{
+
+.img--overlay:hover {
     opacity: 1;
 }
-.drinks-title{
+
+.drinks-title {
     font-size: 1.50em;
-    color:#fff;
+    color: #fff;
 }
 
 /* CUSTOMER SERVICE */
-.fb{
-    color: #E6B17E;
-}
-/* order */
-.loc{
-    text-decoration: none;
-    color: #E6B17E;
-}
-.order-text{
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: #212529;
-}
-.order-text:focus{
-    border-color: #212529;
-    outline: 1px dotted #000
-}
-/* Contact */
-.mail{
-    text-decoration: none;
-    color: #E6B17E;
-}
-.contact-text{
-    color: #E6B17E;
-}
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.fb {
+    color:
+        #FFA240;
 }
 
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+/* order */
+.foods {
+    font-size: 2rem;
 }
-textarea{
+
+/* Contact */
+.mail {
+    text-decoration: none;
+    color:
+        #FFA240;
+}
+
+.contact-text {
+    color:
+        #FFA240;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+textarea {
     width: 100%;
 }
+
 /* Menu */
-.tag{
-    font-size:4rem;
+.tag {
+    font-size: 4rem;
 }
-.img-container{
+
+.img-container {
     position: relative;
 }
-.image{
+
+.image {
     transition: .5s ease;
     backface-visibility: hidden;
 }
-.overlay{
+
+.overlay {
     transition: .5s ease;
     opacity: 0;
-    position: absolute;;
+    position: absolute;
+    ;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.img-container:hover .image{
+
+.img-container:hover .image {
     opacity: 0.2;
 }
-.img-container:hover .overlay{
+
+.img-container:hover .overlay {
     opacity: 1;
 }
+
 /* FOOTER */
-.icons{
-    color: #E6B17E;
-}
-.contact-txt{
-    text-decoration: none;
-    color: #E6B17E;
-    
-}
-.footer{
-    background-color:#212529;
+.icons {
+    color:
+        #FFA240;
 }
 
-.footer h4{
-    color: #E6B17E;
+.contact-txt {
+    text-decoration: none;
+    color:
+        #FFA240;
+
 }
-.footer h5{
+
+.footer {
+    background-color: #212529;
+}
+
+.footer h4 {
+    color:
+        #FFA240;
+}
+
+.footer h5 {
     color: #99592A;
 }
 
-.footer h4{
-    color: #E6B17E;
+.footer h4 {
+    color:
+        #FFA240;
 }
 
-.icons{
-    color: #E6B17E;
+.icons {
+    color:
+        #FFA240;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
 }
