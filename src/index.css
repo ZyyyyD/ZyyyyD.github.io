@@ -9,9 +9,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  padding: 0;
+  color: #DBE9EE;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.home {
+  background-color: #30343F;
+}
+nav{
+  color: #DBE9EE;
+}
+.nav-link:hover{
+  transform: scale(1.2);
+}
+.rounded-circle:hover{
+  transform: scale(1.2);
+}
+.rounded-circle{
+  color: #ffffff;
 }

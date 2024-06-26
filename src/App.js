@@ -1,14 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <div className="home">
         <nav className="navbar navbar-expand-lg static-top p-5">
-          <a className="navbar-brand" href="#">
-            <img src="logo-no-background.png" alt="logo" height="50" />
-          </a>
+          <Link className="navbar-brand" to="/">
+            <img
+              src="logo-no-background.png"
+              alt="logo"
+              style={{ height: 50 }}
+            />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,24 +28,24 @@ function App() {
               <li
                 className="nav-item px-2"
                 style={{ borderRight: "1px solid black" }}>
-                <a
+                <Link
                   className="nav-link text-white active"
-                  href="project.html"
+                  to="./nav/project.jsx"
                   aria-current="page">
                   Project
-                </a>
+                </Link>
               </li>
               <li className="nav-item px-2">
-                <a className="nav-link text-white" href="resume.html">
+                <Link className="nav-link text-white" to="resume.html">
                   Resume
-                </a>
+                </Link>
               </li>
               <li
                 className="nav-item px-2"
                 style={{ borderLeft: "1px solid black" }}>
-                <a className="nav-link text-white" href="about.html">
+                <Link className="nav-link text-white" to="about.html">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
