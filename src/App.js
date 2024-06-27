@@ -1,17 +1,34 @@
 import "./App.css";
 import { Link } from "react-router-dom";
 
+const logo = {
+  height: { height: "50px" },
+  styles: { borderRight: "1px solid black" },
+  img: { width: "20em" },
+  resume: {
+    textDecoration: "none",
+    padding: "30px",
+    backgroundColor: "#F7DEA9",
+  },
+  project: {
+    textDecoration: "none",
+    padding: "30px",
+    backgroundColor: "#B52D43",
+  },
+  about: {
+    textDecoration: "none",
+    padding: "30px",
+    backgroundColor: "#7CE8DA",
+  },
+};
+
 function App() {
   return (
     <div className="App">
       <div className="home">
         <nav className="navbar navbar-expand-lg static-top p-5">
           <Link className="navbar-brand" to="/">
-            <img
-              src="logo-no-background.png"
-              alt="logo"
-              style={{ height: 50 }}
-            />
+            <img src="logo-no-background.png" alt="logo" style={logo.height} />
           </Link>
           <button
             className="navbar-toggler"
@@ -25,24 +42,20 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto ">
-              <li
-                className="nav-item px-2"
-                style={{ borderRight: "1px solid black" }}>
+              <li className="nav-item px-2" style={logo.styles}>
                 <Link
                   className="nav-link text-white active"
-                  to="./nav/project.jsx"
+                  to="./nav/project.js"
                   aria-current="page">
                   Project
                 </Link>
               </li>
-              <li className="nav-item px-2">
+              <li className="nav-item px-2" style={logo.styles}>
                 <Link className="nav-link text-white" to="resume.html">
                   Resume
                 </Link>
               </li>
-              <li
-                className="nav-item px-2"
-                style={{ borderLeft: "1px solid black" }}>
+              <li className="nav-item px-2" style={logo.styles}>
                 <Link className="nav-link text-white" to="about.html">
                   About
                 </Link>
@@ -54,11 +67,7 @@ function App() {
           <div className="row my-5">
             <div className="col-md-6 ">
               <div className=" d-flex justify-content-center align-items-center my-3">
-                <img
-                  style={{ width: "20em" }}
-                  src="logo-no-background.png"
-                  alt="main"
-                />
+                <img style={logo.img} src="logo-no-background.png" alt="main" />
               </div>
             </div>
             <div className="col-md-6 d-flex justify-content-evenly align-items-center">
@@ -66,32 +75,20 @@ function App() {
                 <div className="d-flex justify-content-evenly align-items-center">
                   <a
                     className="rounded-circle fw"
-                    style={{
-                      textDecoration: "none",
-                      padding: "30px",
-                      backgroundColor: "#F7DEA9",
-                    }}
+                    style={logo.resume}
                     href="./_Frias, Zyrel James CV (1).pdf"
                     download="_Frias, Zyrel James CV (1).pdf">
                     Resume
                   </a>
                   <a
                     className="rounded-circle fw"
-                    style={{
-                      textDecoration: "none",
-                      padding: "30px",
-                      backgroundColor: "#B52D43",
-                    }}
+                    style={logo.project}
                     href="project.html">
                     Project
                   </a>
                   <a
                     className="rounded-circle fw"
-                    style={{
-                      textDecoration: "none",
-                      padding: "30px",
-                      backgroundColor: "#7CE8DA",
-                    }}
+                    style={logo.about}
                     href="about.html">
                     About
                   </a>

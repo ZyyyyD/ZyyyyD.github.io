@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      <Project />
+      {/* <Project /> */}
     </BrowserRouter>
   </React.StrictMode>
 );
