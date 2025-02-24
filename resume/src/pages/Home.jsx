@@ -1,53 +1,24 @@
 function Home() {
   return (
-    <>
-      <div className="container">
-        <div className="d-flex justify-content-center align-center">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                Navbar
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                      Home
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      Link
-                    </a>
-                  </li>
-                </ul>
-                {/* <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form> */}
-              </div>
-            </div>
-          </nav>
+    <div className="container text-white">
+      <div className="row">
+        <div className="col-md-6">
+          <h1 className="fw-bolder">ZJ</h1>
+          <p className="lead">
+            I am a full stack web developer with a passion for creating
+            beautiful and functional websites. I am proficient in HTML, CSS,
+            JavaScript, React, Node.js, Express, and MongoDB.
+          </p>
+        </div>
+        <div className="col-md-6">
+          <img
+            src="https://via.placeholder.com/300"
+            alt="ZJ"
+            className="img-fluid"
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default Home;
