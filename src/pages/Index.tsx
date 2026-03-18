@@ -40,7 +40,7 @@ interface CardItem {
   period: string;
   tags: string[];
   brief: string;
-  description: string | null;
+  description: string ;
   bullets: string[];
   links?: { label: string; url: string }[];
 }
@@ -54,7 +54,7 @@ const experiences: CardItem[] = [
     tags: ["PHP","JS", "Wordpress", "AJAX", "JQuery"],
     brief: "Building the main product dashboard and design system.",
      description:
-       null,
+       'null',
     bullets: [
       "Built a shortcode + AJAX-driven search system that filters BuddyPress users, groups, forums, jobs, and language with instant results.",
       "Created dynamic user directory filters and custom subnav items using WordPress hooks and URL parameters. ",
