@@ -1,5 +1,8 @@
-import { Mail, MapPin, Terminal, ArrowRight, ExternalLink } from "lucide-react";
-
+import { useState } from "react";
+import { Mail, MapPin, Terminal, ArrowRight, ExternalLink, MessageSquare, X } from "lucide-react";
+import Chatbot from "../components/Chatbot";
+import pic from "../assets/pic.jpg";
+import cv from "../assets/Zyrel James Frias Dev.pdf";
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const profile = {
@@ -8,8 +11,9 @@ const profile = {
   location: "Magallanes Cavite",
   email: "zyrelfrias00@gmail.com",
   github: "github.com/zyyyyd",
-  linkedin: "linkedin.com/in/zyrel",
+  linkedin: "www.linkedin.com/in/zyrel-james-frias-aa889a269",
   website: "zyrel.dev",
+  avatar: pic, 
   summary:
     "Passionate full-stack developer with experience building scalable web applications. I love turning complex problems into clean, user-friendly solutions.",
 };
@@ -60,7 +64,7 @@ const experiences = [
 const projects = [
   {
     id: 1,
-    title: "ProjectBoard",
+    title: "MangTask",
     subtitle: "Personal Project",
     period: "2024",
     tags: ["React", "TypeScript", "Tailwind", "Shadcn", "Laravel", "mySQL"],
@@ -133,6 +137,8 @@ const C = {
 const allSkillItems = skills.flatMap((g) => g.items);
 
 export default function Index() {
+  const [chatOpen, setChatOpen] = useState(false);
+
   return (
     <div style={{ background: C.bg, color: C.textMid, minHeight: "100vh" }}>
 
@@ -145,11 +151,11 @@ export default function Index() {
           borderBottom: `1px solid ${C.border}`,
         }}
       >
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "16px 32px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div className="nav-container">
           <span style={{ fontSize: "22px", fontWeight: 800, letterSpacing: "-0.03em", color: C.textHi }}>
             ZYREL.DEV
           </span>
-          <div style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+          <div className="nav-links">
             {(["About", "Skills", "Projects", "Experience"] as const).map((s) => (
               <a
                 key={s}
@@ -163,17 +169,19 @@ export default function Index() {
             ))}
           </div>
           <a
-            href={`mailto:${profile.email}`}
+            href={cv}
+            download={cv}
+            className="nav-contact"
             style={{
               background: `linear-gradient(135deg, ${C.amber}, ${C.amberDim})`,
-              color: C.bg, fontWeight: 700, fontSize: "14px",
-              padding: "8px 24px", borderRadius: "12px", textDecoration: "none",
+              color: C.bg, fontWeight: 700,
+              borderRadius: "12px", textDecoration: "none",
               transition: "transform 0.2s",
             }}
             onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.transform = "scale(1.05)")}
             onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.transform = "scale(1)")}
           >
-            Contact Me
+            Download CV
           </a>
         </div>
       </nav>
@@ -187,7 +195,7 @@ export default function Index() {
         <div style={{ position: "absolute", top: "25%", left: "25%", width: "384px", height: "384px", background: `rgba(245,158,11,0.08)`, borderRadius: "50%", filter: "blur(120px)" }} />
         <div style={{ position: "absolute", bottom: "25%", right: "25%", width: "256px", height: "256px", background: "rgba(13,148,136,0.08)", borderRadius: "50%", filter: "blur(100px)" }} />
 
-        <div style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "0 24px", maxWidth: "1024px", margin: "0 auto" }}>
+        <div style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "0 16px", maxWidth: "1024px", margin: "0 auto" }}>
           <span style={{ display: "inline-block", fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: C.amber, marginBottom: "24px" }}>
             Available for Projects
           </span>
@@ -246,11 +254,11 @@ export default function Index() {
       </section>
 
       {/* ── About ── */}
-      <section id="about" style={{ padding: "96px 32px", maxWidth: "1280px", margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "64px", alignItems: "center" }}>
+      <section id="about" className="section-padded" style={{ maxWidth: "1280px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: "64px", alignItems: "center" }}>
 
           {/* Left — portrait card */}
-          <div style={{ position: "relative" }}>
+          <div className="about-portrait-wrapper">
             <div
               style={{
                 aspectRatio: "1", borderRadius: "16px", overflow: "hidden",
@@ -260,24 +268,21 @@ export default function Index() {
               }}
             >
               <div style={{ textAlign: "center", padding: "48px" }}>
-                <div style={{ fontSize: "72px", lineHeight: 1, marginBottom: "16px" }}>👨‍💻</div>
-                <p style={{ fontWeight: 800, fontSize: "20px", color: C.textHi, letterSpacing: "-0.02em" }}>{profile.name}</p>
-                <p style={{ fontSize: "13px", marginTop: "4px", color: C.amber, fontWeight: 600 }}>{profile.title}</p>
+                <img src={profile.avatar} alt={profile.name} />
               </div>
             </div>
             {/* Badge */}
             <div
+              className="about-badge"
               style={{
-                position: "absolute", bottom: "-32px", right: "-32px",
                 background: C.glass, backdropFilter: "blur(12px)",
-                border: `1px solid ${C.border}`, padding: "20px 24px",
-                borderRadius: "16px", display: "flex", alignItems: "center", gap: "16px",
+                border: `1px solid ${C.border}`,
               }}
             >
-              <Terminal size={32} style={{ color: C.amber }} />
+              <Terminal size={28} style={{ color: C.amber, flexShrink: 0 }} />
               <div>
                 <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.15em", color: C.amber }}>Stack</p>
-                <p style={{ color: C.textHi, fontWeight: 700, marginTop: "2px" }}>React & Laravel Dev</p>
+                <p style={{ color: C.textHi, fontWeight: 700, marginTop: "2px", fontSize: "14px" }}>React & Laravel Dev</p>
               </div>
             </div>
           </div>
@@ -369,7 +374,7 @@ export default function Index() {
       </section>
 
       {/* ── Projects ── */}
-      <section id="projects" style={{ padding: "96px 32px", maxWidth: "1280px", margin: "0 auto" }}>
+      <section id="projects" className="section-padded" style={{ maxWidth: "1280px", margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "64px", flexWrap: "wrap", gap: "16px" }}>
           <div>
             <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: C.teal, display: "block", marginBottom: "12px" }}>
@@ -389,7 +394,7 @@ export default function Index() {
           </a>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(300px, 100%), 1fr))", gap: "32px" }}>
           {projects.map((proj) => (
             <div
               key={proj.id}
@@ -472,7 +477,7 @@ export default function Index() {
       </section>
 
       {/* ── Experience ── */}
-      <section id="experience" style={{ padding: "96px 32px", background: "rgba(255,255,255,0.018)" }}>
+      <section id="experience" className="section-padded" style={{ background: "rgba(255,255,255,0.018)" }}>
         <div style={{ maxWidth: "896px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "80px" }}>
             <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: C.teal, display: "block", marginBottom: "12px" }}>
@@ -490,24 +495,26 @@ export default function Index() {
               ...education.map((e) => ({ id: 99, title: e.degree, subtitle: e.school, period: e.year, bullets: [], dotColor: C.textDim, icon: "🎓" })),
             ].map((item, idx) => {
               const isLeft = idx % 2 === 0;
+              const contentBlock = (
+                <>
+                  <h4 style={{ fontSize: "18px", fontWeight: 700, color: C.textHi, marginBottom: "4px" }}>{item.title}</h4>
+                  <p style={{ fontWeight: 600, color: item.dotColor, marginBottom: "8px" }}>{item.subtitle}</p>
+                  {"bullets" in item && (item as typeof experiences[0]).bullets.slice(0, 2).map((b, i) => (
+                    <p key={i} style={{ fontSize: "13px", color: C.textMuted, lineHeight: 1.6, marginBottom: "4px" }}>{b}</p>
+                  ))}
+                </>
+              );
+              const periodSpan = (
+                <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: C.textDim }}>{item.period}</span>
+              );
               return (
                 <div
                   key={`${item.id}-${idx}`}
-                  style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: "0", alignItems: "flex-start" }}
+                  className="timeline-item"
                 >
-                  {/* Left column */}
-                  <div style={{ textAlign: "right", paddingRight: "40px", paddingTop: "4px" }}>
-                    {isLeft ? (
-                      <>
-                        <h4 style={{ fontSize: "18px", fontWeight: 700, color: C.textHi, marginBottom: "4px" }}>{item.title}</h4>
-                        <p style={{ fontWeight: 600, color: item.dotColor, marginBottom: "8px" }}>{item.subtitle}</p>
-                        {"bullets" in item && (item as typeof experiences[0]).bullets.slice(0, 2).map((b, i) => (
-                          <p key={i} style={{ fontSize: "13px", color: C.textMuted, lineHeight: 1.6, marginBottom: "4px" }}>{b}</p>
-                        ))}
-                      </>
-                    ) : (
-                      <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: C.textDim }}>{item.period}</span>
-                    )}
+                  {/* Left column — hidden on mobile */}
+                  <div className="timeline-col-left">
+                    {isLeft ? contentBlock : periodSpan}
                   </div>
 
                   {/* Dot */}
@@ -521,17 +528,17 @@ export default function Index() {
                   </div>
 
                   {/* Right column */}
-                  <div style={{ paddingLeft: "40px", paddingTop: "4px" }}>
-                    {!isLeft ? (
-                      <>
-                        <h4 style={{ fontSize: "18px", fontWeight: 700, color: C.textHi, marginBottom: "4px" }}>{item.title}</h4>
-                        <p style={{ fontWeight: 600, color: item.dotColor, marginBottom: "8px" }}>{item.subtitle}</p>
-                        {"bullets" in item && (item as typeof experiences[0]).bullets.slice(0, 2).map((b, i) => (
-                          <p key={i} style={{ fontSize: "13px", color: C.textMuted, lineHeight: 1.6, marginBottom: "4px" }}>{b}</p>
-                        ))}
-                      </>
+                  <div className="timeline-col-right">
+                    {/* Mobile: always show period + content */}
+                    <div className="timeline-mobile-only">
+                      <div style={{ marginBottom: "6px" }}>{periodSpan}</div>
+                      {contentBlock}
+                    </div>
+                    {/* Desktop: period when isLeft, content when !isLeft */}
+                    {isLeft ? (
+                      <span className="timeline-desktop-only">{item.period}</span>
                     ) : (
-                      <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: C.textDim }}>{item.period}</span>
+                      <div className="timeline-desktop-only">{contentBlock}</div>
                     )}
                   </div>
                 </div>
@@ -580,23 +587,27 @@ export default function Index() {
         </div>
       </footer>
 
+      {/* ── Chatbot popup ── */}
+      {chatOpen && <Chatbot onClose={() => setChatOpen(false)} />}
+
       {/* ── FAB ── */}
-      <a
-        href={`mailto:${profile.email}`}
+      <button
+        onClick={() => setChatOpen((o) => !o)}
         style={{
-          position: "fixed", bottom: "32px", right: "32px", zIndex: 40,
+          position: "fixed", bottom: "16px", right: "16px", zIndex: 50,
           width: "64px", height: "64px",
           background: `linear-gradient(135deg, ${C.amber}, ${C.amberDim})`,
           borderRadius: "50%", boxShadow: "0 25px 50px -12px rgba(0,0,0,0.6)",
           display: "flex", alignItems: "center", justifyContent: "center",
-          color: C.bg, textDecoration: "none",
+          color: C.bg, border: "none", cursor: "pointer",
           transition: "transform 0.3s",
         }}
         onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.transform = "scale(1.1)")}
         onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.transform = "scale(1)")}
       >
-        <Mail size={26} />
-      </a>
+        {chatOpen ? <X size={26} /> : <MessageSquare size={26} />}
+      </button>
+      
 
     </div>
   );
