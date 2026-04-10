@@ -123,6 +123,31 @@ body {
   margin: 0;
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.08);
+}
+@media (min-width: 768px) {
+  .timeline-track::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 h1,
 h2 {
   font-family: var(--heading);
